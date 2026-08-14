@@ -13,6 +13,7 @@ export default function Projects() {
       github: "#",
       live: "#",
       status: "Production",
+      image: "/expense-tracker.png",
     },
     {
       title: "VitaDairy Admin Portal v2",
