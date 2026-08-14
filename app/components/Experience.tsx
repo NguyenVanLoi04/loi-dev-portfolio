@@ -5,25 +5,18 @@ import { motion } from "framer-motion";
 export default function Experience() {
   const experiences = [
     {
-      year: "2024 - Present",
-      role: "Senior Frontend Engineer",
-      company: "TechNova Inc.",
-      description:
-        "Leading the core UI team in migrating a legacy monolith to a decoupled Next.js + Tailwind React application. Reduced initial load time by 40%.",
-    },
-    {
-      year: "2022 - 2024",
+      year: "Sep 2025 - Oct 2026",
       role: "Frontend Developer",
-      company: "Creative Digital Agency",
+      company: "Teso Global",
       description:
-        "Developed and maintained 15+ highly interactive, award-winning marketing sites using React, Framer Motion, and GSAP.",
+        "Developed and maintained robust frontend applications. Focused on scalable architecture, code quality, and delivering pixel-perfect, highly interactive user interfaces.",
     },
     {
-      year: "2021 - 2022",
-      role: "UI Engineer Intern",
-      company: "Startup Co",
+      year: "Feb 2025 - Aug 2025",
+      role: "Frontend Developer Intern",
+      company: "TMA Solutions",
       description:
-        "Assisted in building custom component libraries and implementing design systems across multiple products.",
+        "Assisted in building UI components, fixing bugs, and participating in agile development workflows in a professional enterprise environment.",
     },
   ];
 

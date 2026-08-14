@@ -6,31 +6,53 @@ import { ExternalLink, Github } from "lucide-react";
 export default function Projects() {
   const projects = [
     {
-      title: "Fintech Dashboard UI",
+      title: "MB Tracker Expense Mobile",
       description:
-        "A comprehensive financial dashboard showcasing complex data visualization, real-time updates, and an ultra-modern dark theme.",
-      tech: ["Next.js", "Tailwind", "Recharts", "Framer Motion"],
-      github: "https://github.com",
-      live: "https://example.com",
-      status: "Live",
+        "A smart personal finance management app. Integrated with AI OCR for receipt scanning and automatic category extraction. Built with a robust Layered Architecture.",
+      tech: ["React Native", "Expo SDK 54", "Redux", "React Query", "AI Vision", "Zod"],
+      github: "#",
+      live: "#",
+      status: "Production",
     },
     {
-      title: "TaskFlow Platform",
+      title: "VitaDairy Admin Portal v2",
       description:
-        "A highly interactive Kanban-style task management tool heavily inspired by Linear. Built with drag-and-drop mechanics and optimistic UI updates.",
-      tech: ["React", "Zustand", "dnd-kit", "Supabase"],
-      github: "https://github.com",
-      live: "https://example.com",
-      status: "Beta",
+        "A large-scale internal administration system featuring Zero-Trust Security. Engineered for managing Affiliate campaigns, reviewing social media evidence, and optimizing performance for massive datasets.",
+      tech: ["React 18", "TypeScript", "Vite", "MUI v5", "Redux", "React Query"],
+      github: "#",
+      live: "#",
+      status: "Production",
+      image: "/admin-portal.png", // Add your image to the public folder as admin-portal.png
     },
     {
-      title: "E-Commerce Storefront",
+      title: "VitaDairy Customer Loyalty System",
       description:
-        "A headless e-commerce frontend optimized for sub-second page loads. Features beautiful micro-interactions on product cards and cart.",
-      tech: ["Next.js App Router", "Stripe", "Tailwind", "Shopify API"],
-      github: "https://github.com",
-      live: "https://example.com",
+        "A mobile-first web application that allows users to scan QR codes using their device camera, track their reward coin history, and seamlessly redeem gifts online.",
+      tech: ["Next.js 14", "TypeScript", "Tailwind", "React Query", "React Hook Form"],
+      github: "#",
+      live: "#",
       status: "Live",
+      image: "/webapp.png",
+    },
+    {
+      title: "VitaDairy Zalo Mini App - Loyalty",
+      description:
+        "A native Mini App on the Zalo platform featuring Optical Character Recognition (OCR) and QR scanning. Delivers a frictionless loyalty experience without requiring external app installations.",
+      tech: ["React 18", "Zalo Mini App SDK", "TanStack Router", "Tailwind v4"],
+      github: "#",
+      live: "#",
+      status: "Live",
+      image: "/zalo-mini-app.png",
+    },
+    {
+      title: "VTD Landing Page Channel",
+      description:
+        "A modern, highly SEO-optimized landing page project. Leverages React Server Components (Next.js 16) and a Feature-based architecture to achieve lightning-fast response times.",
+      tech: ["Next.js 16", "TypeScript", "Tailwind CSS", "Shadcn UI", "Framer Motion"],
+      github: "#",
+      live: "#",
+      status: "Live",
+      image: "/web-channel.png",
     },
   ];
 
@@ -57,27 +79,39 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-150px" }}
               transition={{ duration: 0.7 }}
-              className="group relative flex flex-col md:flex-row gap-8 items-center"
+              className={`group relative flex flex-col gap-8 items-center ${idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
             >
               {/* Project Visual mock */}
-              <div className="w-full md:w-[60%] aspect-video bg-zinc-900 rounded-xl border border-white/10 overflow-hidden relative shadow-2xl z-10">
-                {/* Placeholder for real image */}
-                <div className="absolute inset-0 bg-linear-to-tr from-brand-500/10 to-transparent p-6 flex flex-col justify-between">
-                  <div className="flex gap-2">
-                    <div className="w-3 h-3 rounded-full bg-red-500/50" />
-                    <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
-                    <div className="w-3 h-3 rounded-full bg-green-500/50" />
+              <div className="w-full md:w-[60%] aspect-video bg-zinc-900 rounded-xl border border-white/10 overflow-hidden relative shadow-2xl z-10 transition-transform duration-500 group-hover:scale-[1.02]">
+                {project.image ? (
+                  <div className="relative w-full h-full">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#030014]/80 via-transparent to-transparent opacity-60" />
                   </div>
-                  <div className="text-center font-mono text-zinc-700 opacity-50 font-bold text-4xl transform -rotate-12">
-                    [ Screenshot ]
+                ) : (
+                  <div className="absolute inset-0 bg-linear-to-tr from-brand-500/10 to-transparent p-6 flex flex-col justify-between">
+                    <div className="flex gap-2">
+                      <div className="w-3 h-3 rounded-full bg-red-500/50" />
+                      <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
+                      <div className="w-3 h-3 rounded-full bg-green-500/50" />
+                    </div>
+                    <div className="flex-1 flex items-center justify-center">
+                      <span className="font-mono text-zinc-600/50 font-bold text-3xl md:text-5xl transform -rotate-6 group-hover:scale-110 transition-transform duration-500">
+                        [ Screenshot ]
+                      </span>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
 
               {/* Project Info */}
-              <div className="w-full md:w-[40%] flex flex-col justify-center space-y-6 md:-ml-12 z-20">
-                <div className="glass p-8 rounded-2xl border border-white/10 shadow-xl backdrop-blur-2xl">
-                  <div className="flex items-center gap-3 mb-2">
+              <div className={`w-full md:w-[40%] flex flex-col justify-center space-y-6 z-20 ${idx % 2 === 0 ? "md:-ml-12" : "md:-mr-12"}`}>
+                <div className="glass p-8 rounded-2xl border border-white/10 shadow-xl backdrop-blur-2xl transition-all duration-500 group-hover:border-white/20 group-hover:bg-white/5">
+                  <div className="flex items-center gap-3 mb-3">
                     <span className="relative flex h-2.5 w-2.5">
                       {project.status === "Live" && (
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -86,16 +120,16 @@ export default function Projects() {
                         className={`relative inline-flex rounded-full h-2.5 w-2.5 ${project.status === "Live" ? "bg-emerald-500" : "bg-brand-500"}`}
                       ></span>
                     </span>
-                    <span className="text-xs font-mono text-zinc-400">
+                    <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider">
                       {project.status}
                     </span>
                   </div>
 
-                  <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-brand-400 transition-colors">
+                  <h4 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-brand-400 transition-colors">
                     {project.title}
                   </h4>
 
-                  <p className="text-zinc-400 text-sm leading-relaxed mb-6">
+                  <p className="text-zinc-400 text-sm md:text-base leading-relaxed mb-6">
                     {project.description}
                   </p>
 
@@ -103,31 +137,37 @@ export default function Projects() {
                     {project.tech.map((t) => (
                       <span
                         key={t}
-                        className="text-xs bg-white/5 border border-white/10 rounded-md px-2 py-1 text-zinc-300"
+                        className="text-xs bg-white/5 hover:bg-white/10 border border-white/10 rounded-md px-3 py-1.5 text-zinc-300 transition-colors cursor-default"
                       >
                         {t}
                       </span>
                     ))}
                   </div>
 
-                  <div className="flex items-center gap-4 border-t border-white/5 pt-4">
-                    <a
-                      href={project.github}
-                      className="text-zinc-400 hover:text-white transition-colors"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <Github className="w-5 h-5" />
-                    </a>
-                    <a
-                      href={project.live}
-                      className="text-zinc-400 hover:text-white transition-colors"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                    </a>
-                  </div>
+                  {(project.github !== "#" || project.live !== "#") && (
+                    <div className="flex items-center gap-4 border-t border-white/5 pt-6">
+                      {project.github !== "#" && (
+                        <a
+                          href={project.github}
+                          className="text-zinc-400 hover:text-white transition-colors hover:scale-110"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Github className="w-5 h-5" />
+                        </a>
+                      )}
+                      {project.live !== "#" && (
+                        <a
+                          href={project.live}
+                          className="text-zinc-400 hover:text-white transition-colors hover:scale-110"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <ExternalLink className="w-5 h-5" />
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>

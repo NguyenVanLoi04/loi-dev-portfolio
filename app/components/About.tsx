@@ -51,10 +51,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-zinc-500 leading-relaxed max-w-2xl"
             >
-              With over 4 years of experience specializing in the modern
-              JavaScript ecosystem, I focus heavily on Next.js, Node.js, and
-              cloud platforms. I believe in writing clean, scalable code
-              end-to-end, while never compromising on user experience.
+              With 1.5 years of intensive experience in the modern JavaScript/TypeScript ecosystem, I have successfully architected and delivered robust, production-ready applications. My expertise spans across complex enterprise dashboards, dynamic customer loyalty systems, Zalo Mini Apps, and high-performance mobile applications (React Native/Expo). I take pride in transforming complex business requirements into scalable, clean, and pixel-perfect digital products end-to-end.
             </motion.p>
 
             {/* Core Strengths */}
