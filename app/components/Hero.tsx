@@ -36,7 +36,7 @@ export default function Hero() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-white leading-tight mb-6"
             >
-              Fullstack <br />
+              Frontend <br />
               <span className="text-gradient drop-shadow-[0_0_30px_rgba(168,85,247,0.5)]">
                 Developer
               </span>
@@ -48,9 +48,8 @@ export default function Hero() {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-lg md:text-xl text-[#A1A1AA] max-w-lg leading-relaxed font-light mb-10"
             >
-              Building robust, scalable applications from pixel-perfect
-              frontends to high-performance backends. Specialized in Next.js,
-              Node.js, and modern cloud architectures.
+              Building beautiful, responsive user interfaces and robust web applications.
+              Specialized in React, Next.js, and modern frontend ecosystems.
             </motion.p>
 
             {/* Action Buttons */}
@@ -94,12 +93,12 @@ export default function Hero() {
             <div className="relative">
               {/* Floating Badges */}
               {[
-                { name: "React", icon: "react/61DAFB", color: "#61DAFB", position: "-top-8 -left-4 md:-top-4 md:-left-16", rotate: -12, delay: 0.5 },
+                { name: "React", icon: "react/61DAFB", color: "#61DAFB", position: "-top-8 -left-4 md:-top-12 md:-left-8", rotate: -12, delay: 0.5 },
                 { name: "Next.js", icon: "nextdotjs/white", color: "#FFFFFF", position: "top-10 -right-8 md:top-12 md:-right-24", rotate: 8, delay: 0.7 },
                 { name: "TypeScript", icon: "typescript/3178C6", color: "#3178C6", position: "bottom-1/4 -left-8 md:bottom-14 md:-left-20", rotate: -15, delay: 0.9 },
-                { name: "Node.js", icon: "nodedotjs/339933", color: "#339933", position: "-bottom-8 right-2 md:-bottom-12 md:right-8", rotate: 12, delay: 1.1 },
-                { name: "Nest.js", icon: "nestjs/E0234E", color: "#E0234E", position: "-top-12 right-6 md:-top-16 md:right-16", rotate: -8, delay: 0.6 },
-                { name: "PostgreSQL", icon: "postgresql/4169E1", color: "#4169E1", position: "bottom-12 -right-6 md:bottom-16 md:-right-16", rotate: 15, delay: 0.8 },
+                { name: "Figma", icon: "figma/F24E1E", color: "#F24E1E", position: "-bottom-8 right-2 md:-bottom-12 md:right-8", rotate: 12, delay: 1.1 },
+                { name: "Angular", icon: "angular/DD0031", color: "#DD0031", position: "-top-12 right-6 md:-top-16 md:right-16", rotate: -8, delay: 0.6 },
+                { name: "Vue", icon: "vuedotjs/4FC08D", color: "#4FC08D", position: "bottom-12 -right-6 md:bottom-16 md:-right-16", rotate: 15, delay: 0.8 },
                 { name: "Tailwind", icon: "tailwindcss/06B6D4", color: "#06B6D4", position: "top-1/4 -left-8 md:top-1/4 md:-left-12", rotate: 14, delay: 1.0 },
                 { name: "Docker", icon: "docker/2496ED", color: "#2496ED", position: "-bottom-10 left-10 md:-bottom-16 md:left-24", rotate: -10, delay: 1.2 },
               ].map((stack, index) => (

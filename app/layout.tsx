@@ -13,23 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nguyen Van Loi | Fullstack Developer",
-  description: "Portfolio of Nguyen Van Loi, a Fullstack Developer specializing in Next.js, Node.js, and modern cloud architectures.",
-  keywords: ["Nguyen Van Loi", "Fullstack Developer", "Next.js", "React", "Node.js", "Portfolio", "Frontend", "Backend", "Web Development"],
+  title: "Nguyen Van Loi | Frontend Developer",
+  description: "Portfolio of Nguyen Van Loi, a Frontend Developer specializing in React, Next.js, and modern web ecosystems.",
+  keywords: ["Nguyen Van Loi", "Frontend Developer", "Next.js", "React", "Tailwind", "Portfolio", "Frontend", "Web Development"],
   authors: [{ name: "Nguyen Van Loi" }],
   creator: "Nguyen Van Loi",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://loi-dev.com", // Adjust domain when deploying
-    title: "Nguyen Van Loi | Fullstack Developer",
-    description: "Building robust, scalable applications from pixel-perfect frontends to high-performance backends.",
+    title: "Nguyen Van Loi | Frontend Developer",
+    description: "Building beautiful, responsive user interfaces and robust web applications.",
     siteName: "Nguyen Van Loi Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nguyen Van Loi | Fullstack Developer",
-    description: "Building robust, scalable applications from pixel-perfect frontends to high-performance backends.",
+    title: "Nguyen Van Loi | Frontend Developer",
+    description: "Building beautiful, responsive user interfaces and robust web applications.",
     creator: "@loidev", // Optional: Update to actual twitter handle if available
   },
   robots: {
